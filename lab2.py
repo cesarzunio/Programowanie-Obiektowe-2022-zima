@@ -71,7 +71,29 @@ def zad32():
 
 
 
-# def zad321()
+def zad321(a : list, b : list):
+    outputMatrix = []
+    for i in range(len(a)):
+        outputMatrix.append([])
+        for j in range(len(a[i])):
+            outputMatrix[i].append(a[i][j] + b[i][j])
+    return outputMatrix
+
+
+def printMatrix(a : list):
+    for i in a:
+        line = ''
+        for j in i:
+            line += f'{j} '
+        print(line)
+    print('----------------')
+
+a = [[2, 3], [4, 5]]
+b = [[6, 7], [8, 9]]
+
+printMatrix(a)
+printMatrix(b)
+printMatrix(zad321(a, b))
 
 
 
